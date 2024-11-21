@@ -34,3 +34,19 @@ def buffalo(stadionok):
         if (stadionok[i].varos == "Buffalo"):
             cs_szam += stadionok[i].csapatok_szama
     return cs_szam
+
+# ÁGAZATI feladatok
+
+def beker(szoveg:str = ""):
+    szam:int = int(input(szoveg))
+    return szam
+
+def elso_a(szam, db:int = 1):
+    for i in range(db):
+        while (szam % 2 != 0):
+            szam = beker("Ez nem páros! PÁROS számot kérek! ")
+#1_a
+elso_a(beker("Adj meg egy páros számot! "))
+print()
+#1_b
+elso_a(beker("Adj meg egy páros számot! "), 3)
